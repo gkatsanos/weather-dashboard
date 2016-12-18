@@ -16,9 +16,6 @@ $range-handle-size: 20px !default;
 $range-track-color: $shade-1 !default;
 $range-track-height: 10px !default;
 
-$range-label-color: $shade-10 !default;
-$range-label-width: 60px !default;
-
 body {
   background-color: $dark;
 }
@@ -39,12 +36,17 @@ body {
 }
 .col {
   float: left;
+  width: 100%;
 }
 .col-quarter {
-  width: 25%;
+  @media screen and (min-width: 700px) {
+    width: 25%;
+  }
 }
 .col-half {
-  width: 75%;
+  @media screen and (min-width: 700px) {
+    width: 75%;
+  }
   height: 500px;
 }
 .control-box {
@@ -59,13 +61,13 @@ label {
 /* slider specific */
 .range-slider__range {
   -webkit-appearance: none;
-  width: calc(100% - (#{$range-label-width + 13px}));
   height: $range-track-height;
   border-radius: 5px;
   background: $range-track-color;
   outline: none;
   padding: 0;
   margin: 0;
+  min-width: 200px;
 
   // Range Handle
   &::-webkit-slider-thumb {

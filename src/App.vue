@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import dashboard from './components/Dashboard/dashboard'
+import dashboard from './components/Dashboard/Dashboard'
 
 export default {
   name: 'app',
